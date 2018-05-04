@@ -18,8 +18,7 @@ app.get('/canvas', (req, res) => {
 });
 
 app.get('/about', (req, res) => {
-    res.redirect(path.join(__dirname + '/'));
-   // res.sendFile(path.join(__dirname + '/View/About.html'));
+    res.sendFile(path.join(__dirname + '/View/About.html'));
 });
 
 /**************Start server on a port + can run a custom function when it's started************ */
