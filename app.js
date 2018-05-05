@@ -9,7 +9,7 @@ var app = express();
 app.use(express.static(path.join(__dirname + '/View')));
 
 //Store all JS and CSS in Scripts folder.
-app.use(express.static(path.join(__dirname + '/Script')));
+app.use(express.static(path.join(__dirname + '/build')));
 
 app.use(express.static(path.join(__dirname + '/public')));
 
