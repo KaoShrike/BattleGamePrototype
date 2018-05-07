@@ -1,3 +1,4 @@
 //Requires GameEngine.js
 
-setBackgroundImg();
+//Sample test
+KSGames.Engine.setBackgroundImg();
