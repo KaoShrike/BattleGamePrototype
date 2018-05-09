@@ -14,6 +14,13 @@ KSGames.Engine = (function(){
             image.onload = function(e) {
                 ctx.drawImage(image,0,0);
                 };
+        },
+
+        drawSpriteTest: function(spriteFrame)
+        {
+            ctx.drawImage(spriteFrame.spriteFrameRef.atlasImageRef,spriteFrame.spriteFrameRef.texX,spriteFrame.spriteFrameRef.texY, 
+                spriteFrame.spriteFrameRef.width, spriteFrame.spriteFrameRef.height,
+                spriteFrame.posX,spriteFrame.posY, spriteFrame.width, spriteFrame.height);
         }
     };
 })();
