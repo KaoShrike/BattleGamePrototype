@@ -8,13 +8,24 @@ KSGames.TileMapLib = (function(){
 
     //Public API
     return {
-        //Constructor for a tile map
-        tileMap: function (tiles_width, tiles_height){
+        //Constructor for a single tile
+        gameTile: function (tileIndex){
             //Private Members
-            this.tiles_width = tiles_width;
-            this.tiles_height = tiles_height;
+            this.tileIndex = tileIndex;
+        },
+        
+        gameTileAtlas: function(tileMapTexture){
+            this.tileMapTexture = tileMapTexture;
+            this.tileTexCoords =[];
+        },
 
-            this.tiles = [];
+        //Constructor for a tile map
+        gameTileMap: function (tiles_width, tiles_height){
+            //Private Members
+            this.tiles_width = tiles_width; //Number of tiles wide
+            this.tiles_height = tiles_height; //Number of tiles hight
+
+            this.tiles = []; //Array of tiles
         }
 
     };
