@@ -17,8 +17,7 @@ KSGames.SpriteLib = (function(){
         },
 
         //Game sprite atlas
-        gameSpriteAtlas: function() 
-        {
+        gameSpriteAtlas: function() {
             this.spriteFrames = [];
         },
 
