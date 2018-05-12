@@ -17,6 +17,10 @@ app.get('/canvas', (req, res) => {
     res.sendFile(path.join(__dirname + '/View/Canvas.html'));
 });
 
+app.get('/pixi', (req, res) => {
+    res.sendFile(path.join(__dirname + '/View/Pixi.html'));
+});
+
 app.get('/about', (req, res) => {
     res.sendFile(path.join(__dirname + '/View/About.html'));
 });
