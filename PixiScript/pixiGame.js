@@ -23,7 +23,7 @@ let Resources = PIXI.loader.resources;
 
 //Content Loading
 PIXI.loader
-    .add("/Ember.png")
+    .add(["/ember.json", "/Ember.png"])
     .on("progress",loadProgressHandler)
     .load(contentLoaded);
 
@@ -38,19 +38,44 @@ function loadProgressHandler(loader, resource) {
 
 //Event handler for when pixi completed resource loading
 function contentLoaded() {
+    //Example with a single texture and frame etc
     //Save reference to the texture
     let emberTexture = Resources["/Ember.png"].texture;
-
-    //Set a frame within the texture
     let emberFrame = new PIXI.Rectangle(0,0,40,64);
     emberTexture.frame = emberFrame;
-
     let sprite = new PIXI.Sprite(emberTexture);
     sprite.x=128;
     sprite.y=128;
-    //sprite.width = 128;
-    //sprite.height = 128;
+    sprite.width = 128;
+    sprite.height = 128;
     sprite.rotation = 0.5;
 
     app.stage.addChild(sprite);
+
+    //Example using a json atlas
+    let emberAtlas = Resources["/ember.json"].textures;
+
+    let emberAtlasSprite = new PIXI.Sprite(emberAtlas["Ember.png"]);
+
+    app.stage.addChild(emberAtlasSprite);
+
+    tst = new PIXI.Sprite(Resources["/ember.json"].textures["Ember.png"]);
+    app.stage.addChild(tst);
+
+    //Set a ticker for the game.  Add a game loop function to pixi's ticker and
+    //provide it with a delta argument
+    app.ticker.add(delta => gameLoop(delta));
+}
+
+var currentState = playState;
+
+//Game Loop
+function gameLoop(delta)
+{
+    currentState(delta);
+}
+
+function playState(delta)
+{
+    tst.x += 1;
 }

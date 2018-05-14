@@ -1,0 +1,21 @@
+{"frames": {
+
+    "Ember.png":{
+        "frame": {"x":0,"y":0,"w":40,"h":64},
+        "rotated": false,
+        "trimmed": false,
+        "spriteSourceSize": {"x":0,"y":0,"w":40,"h":64},
+        "sourceSize": {"w":40,"h":64},
+        "pivot": {"x":0.5,"y":0.5}
+    }},
+    "meta": {
+        "app": "https://www.codeandweb.com/texturepacker",
+        "version": "1.0",
+        "image": "Ember.png",
+        "format": "RGBA8888",
+        "size": {"w":512,"h":512},
+        "scale": "1",
+        "smartupdate": "$TexturePacker:SmartUpdate:a007ffd0d03c3150b2be66f79790e111:908c38426b0b73cb9b9ab345b8c204ce:2c61948afa94cdc8c2aa00d60064bbb5$"
+    }
+}
+    
